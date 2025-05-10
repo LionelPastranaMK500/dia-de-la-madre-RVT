@@ -5,11 +5,5 @@ import tailwindcss from '@tailwindcss/vite';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: './', // Usa rutas relativas
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-  },
-  publicDir: 'public',
+  base: 'https://lionelpastranamk500.github.io/dia-de-la-madre-RVT/'
 });
