@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Dancing+Script:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Modo claro (bosque soleado) */
+  --color-primary: #d4f4dd;    /* Verde claro */
+  --color-secondary: #2c5282;  /* Azul oscuro */
+  --color-accent: #f6e05e;     /* Dorado suave */
+  --color-text: #1a202c;       /* Texto oscuro */
+  /* Modo oscuro (noche mágica) */
+  --color-dark-primary: #2d3748;  /* Azul profundo */
+  --color-dark-secondary: #f7fafc; /* Blanco plateado */
+  --color-dark-accent: #ed64a6;   /* Rosa hada */
+  --color-dark-text: #e2e8f0;     /* Texto claro */
+  --font-dancing: 'Dancing Script', cursive;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+/* Estilos base */
+html {
+  font-family: var(--font-poppins), sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+/* Modo oscuro */
+html.dark {
+  background-color: var(--color-dark-primary);
+  color: var(--color-dark-text);
+}
+
+/* Componentes específicos */
+section, div {
+  background-color: transparent;
+}
+html.dark section, html.dark div {
+  background-color: transparent;
+}
+
+/* Textos con transiciones */
+h2, h3 {
+  font-family: var(--font-dancing);
+  color: var(--color-secondary);
+  transition: color 0.5s ease-in-out;
+}
+html.dark h2, html.dark h3 {
+  color: var(--color-dark-secondary);
+}
+h2:hover, h3:hover {
+  color: #fef08a;
+}
+html.dark h2:hover, html.dark h3:hover {
+  color: #ed64a6;
+}
+
+h4 {
+  font-family: var(--font-dancing);
+  color: var(--color-secondary);
+  transition: color 0.5s ease-in-out;
+}
+html.dark h4 {
+  color: #ed64a6;
+}
+
+p {
+  color: var(--color-text);
+  transition: color 0.5s ease-in-out;
+}
+html.dark p {
+  color: var(--color-dark-text);
+}
+p:hover {
+  color: #fef08a;
+}
+html.dark p:hover {
+  color: #ed64a6;
+}
+
+/* Botones */
+button {
+  font-family: var(--font-poppins);
+}
+
+/* Navbar */
+header {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+html.dark header {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Efectos hover existentes */
+.bg-accent {
+  background-color: var(--color-accent);
+  transition: background-color 0.3s ease;
+}
+html.dark .bg-accent {
+  background-color: var(--color-dark-accent);
+}
+.bg-accent:hover {
+  background-color: #fef08a;
+}
+html.dark .bg-accent:hover {
+  background-color: #f472b6;
+}
+
+.text-accent {
+  color: var(--color-accent);
+  transition: color 0.3s ease;
+}
+html.dark .text-accent {
+  color: var(--color-dark-accent);
+}
+.text-accent:hover {
+  color: #fef08a;
+}
+html.dark .text-accent:hover {
+  color: #f472b6;
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
+}
+html.dark .text-secondary {
+  color: var(--color-dark-secondary);
+}
+.text-secondary:hover {
+  color: #3b82f6;
+}
+html.dark .text-secondary:hover {
+  color: #e5e7eb;
+}
+
+.text-text {
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+html.dark .text-text {
+  color: var(--color-dark-text);
+}
+.text-text:hover {
+  color: #4a5568;
+}
+html.dark .text-text:hover {
+  color: #f3f4f6;
+}
+
+/* Tarjetas */
+.bg-white\/10 {
+  transition: background-color 0.3s ease;
+}
+.bg-white\/10:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+html.dark .bg-white\/10:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
